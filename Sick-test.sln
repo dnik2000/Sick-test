@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sick-test", "Sick-test\Sick-test.csproj", "{D543E17A-9FF0-40EB-BC4B-DE384ABBD4BB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SICK-LMS1XX", "SICK-Sensor-LMS1XX\SICK-LMS1XX.csproj", "{3442D54A-B87E-4AD9-9512-37D6D63AFEFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D543E17A-9FF0-40EB-BC4B-DE384ABBD4BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D543E17A-9FF0-40EB-BC4B-DE384ABBD4BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D543E17A-9FF0-40EB-BC4B-DE384ABBD4BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D543E17A-9FF0-40EB-BC4B-DE384ABBD4BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3442D54A-B87E-4AD9-9512-37D6D63AFEFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3442D54A-B87E-4AD9-9512-37D6D63AFEFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3442D54A-B87E-4AD9-9512-37D6D63AFEFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3442D54A-B87E-4AD9-9512-37D6D63AFEFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46C1DB80-EC70-494B-A610-A7611F54FBA5}
+	EndGlobalSection
+EndGlobal
