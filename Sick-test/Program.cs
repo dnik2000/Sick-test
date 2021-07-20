@@ -19,7 +19,7 @@ namespace Sick_test
             //using var lms = new LMS1XX("192.168.5.241", 2112, 5000, 5000, $"dump-{DateTime.Now:yyyyMMdd-HHmmss}.bin");
 
             // use file as sensor responce
-            using var lms = new LMS1XX("dump-20210720-172823.bin");
+            using var lms = new LMS1XX("dump-20210720-185023.bin");
 
             lms.Connect();
             Console.WriteLine($"QueryStatus {lms.QueryStatus()}");
@@ -91,7 +91,7 @@ namespace Sick_test
                     }
                     
 
-                    if (data.ScanCounter == null || data.ScanCounter != prevScan)
+                    if (data == null || data.ScanCounter == null || data.ScanCounter != prevScan)
                     {
                         lostSync++;
                         needLog = true;
@@ -108,14 +108,14 @@ namespace Sick_test
 
                     if (true)
                     {
-                        Console.WriteLine($"{DateTime.Now:HH.mm.ss.fff}:{data.TimeOfTransmission.GetValueOrDefault()} " +
+                        Console.WriteLine($"{DateTime.Now:HH.mm.ss.fff}:{data?.TimeOfTransmission.GetValueOrDefault()} " +
                             $"Total = {totalCnt}:{totalCnt-prevTotal}:{localCnt} " +
                             $"Bads = {badDataCnt} " +
                             $"DeSync = {lostSync}:{prevScan}:{data?.ScanCounter}:{data?.ScanCounter.GetValueOrDefault() - prevScan} " +
                             $"Status = {data?.DeviceStatus} " +
                             $"Scans = {data?.ScanCounter} " +
                             $"Telegrams = {data?.TelegramCounter} " +
-                            $"Delta = {data.ScanCounter.GetValueOrDefault() - data.TelegramCounter.GetValueOrDefault()} " +
+                            $"Delta = {data?.ScanCounter.GetValueOrDefault() - data?.TelegramCounter.GetValueOrDefault()} " +
                             $"bytes = {data?.DistancesData?.Count}");
                         prevTotal = totalCnt;
                         localCnt = 0;
